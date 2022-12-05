@@ -42,10 +42,35 @@ php artisan vendor:publish --tag="filament-bookmarks-menu-views"
 ```
 
 ## Usage
-
+To offer your logged in users the ability to add favorites to their personal bookmarks menu just add the code below to any Filament Resource Page. You must ofcourse 
+modify the code, labels and such as you can understand.
 ```php
-$filamentBookmarksMenu = new STAFEGROUPAB\FilamentBookmarksMenu();
-echo $filamentBookmarksMenu->echoPhrase('Hello, STAFEGROUPAB!');
+protected function getActions(): array
+    {
+        return [
+            Action::make('settings')->action('createBookmarksMenu')->label('Ny Favorit')->icon('heroicon-o-bookmark')->color('danger'),
+        ];
+    }
+
+    public function createBookmarksMenu(): void
+    {
+       $bmu = new BookmarksMenu();
+       $bmu->menu_label = 'Create User';
+       $bmu->menu_url = ENV('APP_URL') . '/admin/users/create';
+       $bmu->menu_user_id = Auth::user()->id;
+       $bmu->sort_order = 99;
+       $bmu->save();
+
+        Notification::make()
+            ->title('New Bookmark saved successfully to your personal menu')
+            ->icon('heroicon-o-bookmark')
+            ->iconColor('success')
+            ->send();
+
+        $this->redirect($this->previousUrl);
+
+    }
+
 ```
 
 ## Testing
