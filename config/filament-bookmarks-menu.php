@@ -9,5 +9,5 @@ return [
     'add_active_icon' => ['hero-s-heart'],
     'add_inactive_icon_colors' => ['text-white bg-red-600'],
     'add_active_icon_colors' => ['text-red-600 bg-white'],
-
+    'add_bookmarks_by_users' => true,
 ];

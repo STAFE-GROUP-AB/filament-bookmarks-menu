@@ -22,6 +22,7 @@ class FilamentBookmarksMenuServiceProvider extends PluginServiceProvider
             ->name('filament-bookmarks-menu')
             ->hasConfigFile()
             ->hasViews()
+            ->hasTranslations()
             ->hasMigration('create_filament_bookmarks_menu_table');
 
     }
@@ -37,7 +38,7 @@ class FilamentBookmarksMenuServiceProvider extends PluginServiceProvider
 
         Filament::registerRenderHook(
             'content.start',
-            fn (): string => Blade::render('@livewire(\'bookmarks-icon\')'),
+            fn (): string => Blade::render('@livewire(\'bookmarks-menu\')'),
         );
 
         parent::boot();
