@@ -58,6 +58,12 @@ Optionally, you can publish the views using
 php artisan vendor:publish --tag="filament-bookmarks-menu-views"
 ```
 
+Optionally, you can publish the translation files, we will ship in English only
+
+```bash
+php artisan vendor:publish --tag="filament-bookmarks-menu-translations"
+```
+
 ## Usage
 To offer your logged in users the ability to add favorites to their personal bookmarks menu
 make sure you go to the config file and set the below. That will make the plugin
