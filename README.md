@@ -1,9 +1,13 @@
-# Filament Bookmarks Menu for Filament Admin
+# Filament Bookmarks for Filament Admin
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/stafe-group-ab/filament-bookmarks-menu.svg?style=flat-square)](https://packagist.org/packages/stafe-group-ab/filament-bookmarks-menu)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/stafe-group-ab/filament-bookmarks-menu/run-tests?label=tests)](https://github.com/stafe-group-ab/filament-bookmarks-menu/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/stafe-group-ab/filament-bookmarks-menu/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/stafe-group-ab/filament-bookmarks-menu/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/stafe-group-ab/filament-bookmarks-menu.svg?style=flat-square)](https://packagist.org/packages/stafe-group-ab/filament-bookmarks-menu)
+
+![Screen shot of Filament Bookmarks Menu](./images/bookmarks-menu.png)
+
+![Screen shot of Filament User Menu](./images/add-bookmark-menu.png)
 
 This Filament Plugin will add a bookmarks menu to your Filament Admin application. You can setup global items in this menu or let users add their own items.
 The plugin will render an add & remove bookmark icon on top of all pages where you want it.

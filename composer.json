@@ -3,7 +3,11 @@
     "description": "This plugin let's you add a global bookmarks menu for users in Filament Admin",
     "keywords": [
         "STAFE-GROUP-AB",
-        "laravel",
+        "filament",
+        "bookmarks",
+        "favorites",
+        "filament admin",
+        "filament plugin",
         "filament-bookmarks-menu"
     ],
     "homepage": "https://github.com/stafe-group-ab/filament-bookmarks-menu",
