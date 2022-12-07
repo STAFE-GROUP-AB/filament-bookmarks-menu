@@ -48,4 +48,13 @@ return [
     'resource.table.target' => 'Target',
     'resource.table.sort_order' => 'Sort order',
     'resource.table.user' => 'Belongs to user',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Notifications
+    |--------------------------------------------------------------------------
+    */
+    'notification.add' => 'Your bookmark has been added successfully!',
+    'notification.remove' => 'Your bookmark has been removed successfully!',
+    'notification.empty' => 'You don\'t have any bookmarks, add some first and click here again!',
 ];

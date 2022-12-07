@@ -12,15 +12,16 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
+use Livewire\Component;
 use STAFEGROUPAB\FilamentBookmarksMenu\Facades\FilamentBookmarksMenu;
 
-class BookmarksMenu extends Page
+class BookmarksMenu extends Component
 {
-    public $resources;
+    public $menuitems;
 
     public function mount(): void
     {
-        $this->resources = $this->getBookmarksMenuItems();
+        $this->menuitems = $this->getBookmarksMenuItems();
     }
 
     public function getBookmarksMenuItems()
