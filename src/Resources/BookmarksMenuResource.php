@@ -33,7 +33,8 @@ class BookmarksMenuResource extends Resource
                             '_self' => __('filament-bookmarks-menu::filament-bookmarks-menu.resource.form.target.self'),
                             '_top' => __('filament-bookmarks-menu::filament-bookmarks-menu.resource.form.target.top'),
                             '_blank' => __('filament-bookmarks-menu::filament-bookmarks-menu.resource.form.target.blank')
-                        ])->placeholder(__('filament-bookmarks-menu::filament-bookmarks-menu.resource.form.target.placeholder.label')),
+                        ])->placeholder(__('filament-bookmarks-menu::filament-bookmarks-menu.resource.form.target.placeholder.label'))
+                            ->label(__('filament-bookmarks-menu::filament-bookmarks-menu.resource.form.target')),
                         Forms\Components\TextInput::make('sort_order')->required()->numeric()->label(__('filament-bookmarks-menu::filament-bookmarks-menu.resource.form.sort_order'))->default(0),
                         Forms\Components\Select::make('menu_user_id')->nullable()->label(__('filament-bookmarks-menu::filament-bookmarks-menu.resource.form.user'))->options(
                             User::all()->pluck('name', 'id')
