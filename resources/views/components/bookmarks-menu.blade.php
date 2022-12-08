@@ -14,7 +14,12 @@
             @endif
             <x-filament::dropdown.list>
                 @if($menuitems->whereNull('menu_user_id')->count()>0)
-                    <p class="pl-2 text-gray-600 dark:text-gray-200 border-b">{{ __('filament-bookmarks-menu::filament-bookmarks-menu.label.global') }}</p>
+                    <x-filament::dropdown.header
+                        color="secondary"
+                        tag="div"
+                    >{{ __('filament-bookmarks-menu::filament-bookmarks-menu.label.global') }}
+                    </x-filament::dropdown.header>
+
                     @foreach($menuitems->whereNull('menu_user_id') as $menuitem)
                         <x-filament::dropdown.item
                             :color="'secondary'"
@@ -28,7 +33,12 @@
                     @endforeach
                 @endif
                 @if($menuitems->whereNotNull('menu_user_id')->count()>0)
-                    <p class="pl-2 text-gray-600 dark:text-gray-200 border-b">{{ __('filament-bookmarks-menu::filament-bookmarks-menu.label.private') }}</p>
+                        <x-filament::dropdown.header
+                            color="secondary"
+                            tag="div"
+                        >{{ __('filament-bookmarks-menu::filament-bookmarks-menu.label.private') }}
+                        </x-filament::dropdown.header>
+
                     @foreach($menuitems->whereNotNull('menu_user_id') as $menuitem)
                         <x-filament::dropdown.item
                             :color="'secondary'"
