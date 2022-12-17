@@ -20,7 +20,7 @@ class BookmarksMenuResource extends Resource
     protected static ?string $model = BookmarksMenu::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
-    protected static ?string $recordTitleAttribute = "label";
+    protected static ?string $recordTitleAttribute = "menu_label";
     public static function form(Form $form): Form
     {
         return $form
