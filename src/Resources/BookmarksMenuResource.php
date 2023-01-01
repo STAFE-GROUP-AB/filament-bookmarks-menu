@@ -21,6 +21,11 @@ class BookmarksMenuResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
     protected static ?string $recordTitleAttribute = "menu_label";
+    //protected static bool $shouldRegisterNavigation = !!;
+    protected static function shouldRegisterNavigation(): bool
+    {
+        return config('filament-bookmarks-menu.show_resource_in_navigation', true);
+    }
     public static function form(Form $form): Form
     {
         return $form
