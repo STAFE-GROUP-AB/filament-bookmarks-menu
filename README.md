@@ -47,6 +47,7 @@ return [
     'notification_remove_icon' => 'heroicon-o-bookmark',
     'notification_add_color' => 'success',
     'notification_remove_color' => 'danger',
+    'show_resource_in_navigation' => false,
 ];
 ```
 
