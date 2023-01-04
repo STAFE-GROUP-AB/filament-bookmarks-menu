@@ -49,6 +49,7 @@ return [
     'resource.table.sort_order' => 'Sort order',
     'resource.table.user' => 'Belongs to user',
 
+    'delete.confirm' => 'Sure?',
     /*
     |--------------------------------------------------------------------------
     | Notifications

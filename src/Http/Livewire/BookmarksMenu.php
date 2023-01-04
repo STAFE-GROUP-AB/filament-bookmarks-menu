@@ -18,7 +18,7 @@ use STAFEGROUPAB\FilamentBookmarksMenu\Facades\FilamentBookmarksMenu;
 class BookmarksMenu extends Component
 {
     public $menuitems;
-
+    public $menuItemToRemove = null;
     public function mount(): void
     {
         $this->menuitems = $this->getBookmarksMenuItems();
@@ -37,7 +37,22 @@ class BookmarksMenu extends Component
 
         return $all_menu_item;
     }
+    public function removeMenuItem($id) {
+        $this->menuItemToRemove = $id;
+    }
+    public function deleteMenuItem($id) {
+        if ($this->menuItemToRemove) {
+            \App\Models\FilamentBookmarksMenu::where('id', $id)->delete();
+            $this->menuItemToRemove = null;
+            $this->menuitems = $this->getBookmarksMenuItems();
+            Notification::make()
+                ->title(__('filament-bookmarks-menu::filament-bookmarks-menu.notification.remove'))
+                ->icon(config('filament-bookmarks-menu.notification_remove_icon'))
+                ->iconColor(config('filament-bookmarks-menu.notification_remove_color'))
+                ->send();
 
+        }
+    }
     public function render(): View
     {
         return view('filament-bookmarks-menu::components.bookmarks-menu');

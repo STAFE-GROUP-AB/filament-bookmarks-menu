@@ -17,5 +17,10 @@ return [
     'notification_remove_icon' => 'heroicon-o-bookmark',
     'notification_add_color' => 'success',
     'notification_remove_color' => 'danger',
-    'show_resource_in_navigation' => false,
+    'show_resource_in_navigation' => true,
+    'delete_icon' => 'heroicon-o-trash',
+    'delete_class' => 'w-5 h-5 cursor-pointer text-danger-700 dark:text-gray-200',
+    'delete_text_class' => 'cursor-pointer text-white bg-black dark:text-gray-200',
+    'show_private_label_in_menu' => false,
+    'show_global_label_in_menu' => false,
 ];

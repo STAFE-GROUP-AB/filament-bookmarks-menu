@@ -48,6 +48,11 @@ return [
     'notification_add_color' => 'success',
     'notification_remove_color' => 'danger',
     'show_resource_in_navigation' => false,
+    'delete_icon' => 'heroicon-o-trash',
+    'delete_class' => 'w-5 h-5 cursor-pointer text-danger-700 dark:text-gray-200',
+    'delete_text_class' => 'cursor-pointer text-white bg-black dark:text-gray-200',
+    'show_private_label_in_menu' => false,
+    'show_global_label_in_menu' => false,
 ];
 ```
 
@@ -70,7 +75,21 @@ render the add / remove bookmark icon feature on all pages.
 ```php
  'add_bookmarks_by_users' => true,
 ```
-
+### Delete items in the menu
+Now your users will see a svg trash icon next to all their private menu items. You can config this icon
+and colors in the config file. You can also set the label in the updated lang files.
+```php
+    'delete_icon' => 'heroicon-o-trash',
+    'delete_class' => 'w-5 h-5 cursor-pointer text-danger-700 dark:text-gray-200',
+    'delete_text_class' => 'cursor-pointer text-white bg-black dark:text-gray-200',
+```
+### Displaying labels in the bookmarks menu?
+Now you can enable / disable the Global & Private labels in the Bookmarks Menu in the config file.
+```php
+   'show_private_label_in_menu' => false,
+    'show_global_label_in_menu' => false,
+```
+### Excluding pages
 In almost all cases there will be pages that you want to exclude from
 this plugin. There is an array in the config file where you can add
 the exclusions you want. It will exclude in the ending string in all
