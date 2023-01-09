@@ -42,7 +42,7 @@ class BookmarksMenu extends Component
     }
     public function deleteMenuItem($id) {
         if ($this->menuItemToRemove) {
-            \App\Models\FilamentBookmarksMenu::where('id', $id)->delete();
+            \STAFEGROUPAB\FilamentBookmarksMenu\Models\BookmarksMenu::where('id', $id)->delete();
             $this->menuItemToRemove = null;
             $this->menuitems = $this->getBookmarksMenuItems();
             Notification::make()
