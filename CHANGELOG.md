@@ -2,6 +2,10 @@
 
 All notable changes to `filament-bookmarks-menu` will be documented in this file.
 
+## Model fixed in component - 2023-01-09
+
+Model was not found when deleting a bookmark.
+
 ## New features - 2023-01-04
 
 - You can now configure if you want to show the labels Global / Private in the menu for your users.
