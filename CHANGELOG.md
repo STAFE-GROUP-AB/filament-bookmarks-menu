@@ -2,6 +2,10 @@
 
 All notable changes to `filament-bookmarks-menu` will be documented in this file.
 
+## Italian language files  - 2023-02-07
+
+Thanks a lot for the Italian language files
+
 ## Model fixed in component - 2023-01-09
 
 Model was not found when deleting a bookmark.
