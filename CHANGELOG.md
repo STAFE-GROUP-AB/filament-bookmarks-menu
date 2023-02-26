@@ -2,6 +2,10 @@
 
 All notable changes to `filament-bookmarks-menu` will be documented in this file.
 
+## Adding Laravel 10 compatibility  - 2023-02-26
+
+Adding Laravel 10 compatibility
+
 ## Italian language files  - 2023-02-07
 
 Thanks a lot for the Italian language files
