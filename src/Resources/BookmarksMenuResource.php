@@ -28,7 +28,7 @@ class BookmarksMenuResource extends Resource
     }
     public static function form(Form $form): Form
     {
-        $userModel = config(filament-bookmarks-menu.user_model);
+        $userModel = config('filament-bookmarks-menu.user_model', User::class);
         return $form
             ->schema([
                 Card::make()
