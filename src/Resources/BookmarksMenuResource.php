@@ -28,6 +28,7 @@ class BookmarksMenuResource extends Resource
     }
     public static function form(Form $form): Form
     {
+        $userModel = config(filament-bookmarks-menu.user_model);
         return $form
             ->schema([
                 Card::make()
@@ -42,7 +43,7 @@ class BookmarksMenuResource extends Resource
                             ->label(__('filament-bookmarks-menu::filament-bookmarks-menu.resource.form.target')),
                         Forms\Components\TextInput::make('sort_order')->required()->numeric()->label(__('filament-bookmarks-menu::filament-bookmarks-menu.resource.form.sort_order'))->default(0),
                         Forms\Components\Select::make('menu_user_id')->nullable()->label(__('filament-bookmarks-menu::filament-bookmarks-menu.resource.form.user'))->options(
-                            User::all()->pluck('name', 'id')
+                            $userModel::all()->pluck('name', 'id')
                         )->placeholder(__('filament-bookmarks-menu::filament-bookmarks-menu.resource.form.user.placeholder.label')),
                     ])
             ]);
