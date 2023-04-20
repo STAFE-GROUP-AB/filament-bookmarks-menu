@@ -4,6 +4,7 @@ namespace STAFEGROUPAB\FilamentBookmarksMenu\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class BookmarksMenu extends Model
 {
@@ -12,6 +13,7 @@ class BookmarksMenu extends Model
     protected $table = "filament_bookmarks_menu_table";
 
     public function user() {
-        return $this->belongsTo(\App\Models\User::class, 'menu_user_id', 'id');
+        $userModel = config('filament-bookmarks-menu.user_model', User::class);
+        return $this->belongsTo($userModel, 'menu_user_id', 'id');
     }
 }
