@@ -2,6 +2,10 @@
 
 All notable changes to `filament-bookmarks-menu` will be documented in this file.
 
+## Spanish package and user model - 2023-06-03
+
+Thanks for your help with this package.
+
 ## Adding Laravel 10 compatibility  - 2023-02-26
 
 Adding Laravel 10 compatibility
