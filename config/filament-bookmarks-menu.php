@@ -23,4 +23,5 @@ return [
     'delete_text_class' => 'cursor-pointer text-white bg-black dark:text-gray-200',
     'show_private_label_in_menu' => false,
     'show_global_label_in_menu' => false,
+    'user_model' => env('USER_MODEL',App\Models\User::class)
 ];
